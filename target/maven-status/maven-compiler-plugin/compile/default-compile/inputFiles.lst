@@ -1,0 +1,9 @@
+/home/muaaz/projects/tutorialwebapplication/src/main/java/com/tutorial/web/config/SpringConfig.java
+/home/muaaz/projects/tutorialwebapplication/src/main/java/com/tutorial/web/service/TutorialService.java
+/home/muaaz/projects/tutorialwebapplication/src/main/java/com/tutorial/web/WebInitializer.java
+/home/muaaz/projects/tutorialwebapplication/src/main/java/com/tutorial/web/data/Tutorial.java
+/home/muaaz/projects/tutorialwebapplication/src/main/java/com/tutorial/web/data/Tut.java
+/home/muaaz/projects/tutorialwebapplication/src/main/java/com/tutorial/web/service/Repository.java
+/home/muaaz/projects/tutorialwebapplication/src/main/java/com/tutorial/web/service/TutRepositoryImpl.java
+/home/muaaz/projects/tutorialwebapplication/src/main/java/com/tutorial/web/service/MongoFactory.java
+/home/muaaz/projects/tutorialwebapplication/src/main/java/com/tutorial/web/controller/TuteController.java
