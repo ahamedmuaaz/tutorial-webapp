@@ -1,6 +1,2 @@
-com/tutorial/web/config/SpringConfig.class
-com/tutorial/web/service/TutorialService.class
-com/tutorial/web/controller/TuteController.class
-com/tutorial/web/data/Tutorial.class
-com/tutorial/web/WebInitializer.class
-com/tutorial/web/service/MongoFactory.class
+com/tutorial/web/service/TutorialRepository.class
+com/tutorial/web/data/Tut.class

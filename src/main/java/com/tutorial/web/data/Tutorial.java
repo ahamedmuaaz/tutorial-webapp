@@ -1,10 +1,14 @@
 package com.tutorial.web.data;
 
-import java.io.Serializable;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.io.Serializable;
+@Document
 public class Tutorial implements Serializable {
     private static final long serialVersionUID = 1L;
 
+    @Id
     private int id;
     private String name;
     private String tutname;
