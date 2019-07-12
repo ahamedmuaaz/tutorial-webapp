@@ -8,10 +8,10 @@ import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-
-
+import org.springframework.web.bind.annotation.RequestParam;
 
 
 @Controller
@@ -32,6 +32,23 @@ public class TuteController {
         return "index";
 
     }
+
+    @RequestMapping(value = "/save", method = RequestMethod.POST)
+    public String save(@ModelAttribute("userAttr") Tutorial tut) {
+
+          //TuteService.edit(tut);
+
+        return "redirect:list";
+    }
+
+    @RequestMapping(value="/edit",method=RequestMethod.GET)
+    public String edittute(@RequestParam(value="id", required=true) int id, Model model){
+
+        model.addAttribute("userAttr",repository.findById(id));
+
+        return "form";
+    }
+
 
 
 
