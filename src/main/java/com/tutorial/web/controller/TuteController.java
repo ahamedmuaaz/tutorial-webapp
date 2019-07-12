@@ -11,7 +11,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-
+import java.util.List;
 
 
 @Controller
@@ -32,6 +32,18 @@ public class TuteController {
         return "index";
 
     }
+
+    @RequestMapping(value = "/list", method = RequestMethod.GET)
+    public String viewAllTutes(Model modal){
+
+
+        List<Tutorial> listtut=repository.findAll();
+        modal.addAttribute("tutelist",listtut);
+
+        return "viewlist";
+    }
+
+
 
 
 
