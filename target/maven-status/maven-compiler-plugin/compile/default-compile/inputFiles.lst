@@ -1,8 +1,5 @@
-/home/muaaz/Desktop/tutorialwebapplication/src/main/java/com/tutorial/web/service/TutorialService.java
 /home/muaaz/Desktop/tutorialwebapplication/src/main/java/com/tutorial/web/WebInitializer.java
-/home/muaaz/Desktop/tutorialwebapplication/src/main/java/com/tutorial/web/data/Tut.java
 /home/muaaz/Desktop/tutorialwebapplication/src/main/java/com/tutorial/web/service/TutorialRepository.java
-/home/muaaz/Desktop/tutorialwebapplication/src/main/java/com/tutorial/web/service/MongoFactory.java
 /home/muaaz/Desktop/tutorialwebapplication/src/main/java/com/tutorial/web/data/Tutorial.java
 /home/muaaz/Desktop/tutorialwebapplication/src/main/java/com/tutorial/web/config/SpringConfig.java
 /home/muaaz/Desktop/tutorialwebapplication/src/main/java/com/tutorial/web/controller/TuteController.java
