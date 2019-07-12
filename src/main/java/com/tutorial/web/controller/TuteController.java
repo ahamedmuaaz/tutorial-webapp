@@ -47,18 +47,22 @@ public class TuteController {
 
     @RequestMapping(value = "/save", method = RequestMethod.POST)
     public String save(@ModelAttribute("userAttr") Tutorial tut) {
-
-          //TuteService.edit(tut);
-
+          repository.save(tut);
         return "redirect:list";
     }
 
     @RequestMapping(value="/edit",method=RequestMethod.GET)
     public String edittute(@RequestParam(value="id", required=true) int id, Model model){
-
         model.addAttribute("userAttr",repository.findById(id));
 
         return "form";
+    }
+
+    @RequestMapping(value="/tut",method=RequestMethod.GET)
+    public String viewtute(@RequestParam(value="id", required=true) int id, Model model){
+        model.addAttribute("tute",repository.findById(id));
+
+        return "tutorial";
     }
 
 
