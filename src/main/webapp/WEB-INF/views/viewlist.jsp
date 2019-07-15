@@ -23,24 +23,32 @@
 </HEAD>
 
 <body style="background-color: cornsilk">
-
-<p style="color: black; border: 5px solid black; letter-spacing: 5px; padding: 10px;"><b>List Of Tutorials Available</b>
+<div class="container">
+<p  class="text-center" style="color: black; border: 5px solid black; letter-spacing: 5px; padding: 10px;"><b>List Of Tutorials Available</b>
 <p>
     <c:forEach var="emp" items="${tutelist}">
 <ul style="font-family: Arial; font-size: 14pt;">
 
 
-    <li>Tutorial ID: ${emp.getId()} </li>
-
+  <div class="row">
+      <div class="col-8">
     <li>Tutorial Name: ${emp.getName()}</li>
+      </div>
+      <div class="col-4">
+
+          <!-- rating.js file -->
 
     <p><c:url var="tutUrl" value="/tut?id=${emp.getId()}" /><a id="update" href="${tutUrl}" class="btn btn-warning">View</a></p>
+</div>
 
+
+</div>
 
 </ul>
+<hr>
 </c:forEach>
 
-
+</div>
 </body>
 
 

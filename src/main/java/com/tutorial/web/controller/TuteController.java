@@ -29,7 +29,6 @@ public class TuteController {
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public  String index(Model model){
 
-        repository.save(new Tutorial(1,"Java","Muaaz","it is a java tutorial for beginners","https://www.tutorialspoint.com/java/"));
 
         return "index";
 
