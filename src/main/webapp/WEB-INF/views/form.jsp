@@ -1,46 +1,152 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: muaaz
-  Date: 7/11/19
-  Time: 11:01 AM
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <html>
 <head>
-    <title>Tutorial form</title>
+
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <style>
+        /* Assign grid instructions to our parent grid container */
+        .grid-container {
+            display: grid;
+            grid-template-columns: 240px 1fr;
+            grid-template-rows: 50px 1fr 50px;
+            grid-template-areas:
+                    "sidenav header"
+                    "sidenav main"
+                    "sidenav footer";
+            height: 100vh;
+        }
+
+        /* Give every child element its grid name */
+        .header {
+            grid-area: header;
+            background-color: #648ca6;
+        }
+
+        .sidenav {
+            grid-area: sidenav;
+            background-color: #394263;
+        }
+
+        .main {
+            grid-area: main;
+            background-color: #8fd4d9;
+        }
+
+        .footer {
+            grid-area: footer;
+            background-color: #648ca6;
+        }
+        .header, .footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 16px;
+            background-color: #648ca6;
+        }
+
+        .sidenav {
+            display: flex; /* Will be hidden on mobile */
+            flex-direction: column;
+            grid-area: sidenav;
+            background-color: #394263;
+        }
+        .sidenav__list {
+            padding: 0;
+            margin-top: 85px;
+            list-style-type: none;
+        }
+        .sidenav__list-item {
+            padding: 20px 20px 20px 40px;
+            color: #ddd;
+        }
+        .sidenav__list-item:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            cursor: pointer;
+        }
+
+        a:link, a:visited {
+            background-color: #394262;
+            color: white;
+            padding: 14px 25px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        a:hover, a:active {
+            background-color: #394262;
+            border-color: black;
+        }
+
+    </style>
+
 </head>
 <body>
-<div class="container">
-    <h3 id="form_header" class="text-warning" align="center">Tutorial form</h3>
-    <div> </div>
 
-    <!-- User input form to add a new user or update the existing user-->
-    <c:url var="saveUrl" value="/" />
-    <form:form id="user_form" modelAttribute="userAttr" method="POST" action="/save">
-        <form:hidden path="id" />
+<h1 align="center">The Online Library</h1>
+<h5 align="center"><fmt:formatDate value="${today}" pattern="yyy-MM-dd" /></h5>
 
-        <label for="name">Enter Tutorial Name: </label>
-        <form:input id="name" cssClass="form-control" path="name" />
+<!--Simple dashboard grid layout-->
+<div class="grid-container">
+    <header class="header"></header>
+    <aside class="sidenav">
+        <ul class="sidenav__list">
+            <li class="sidenav__list-item"><a href="${pageContext.request.contextPath}/add">Add Tutorial</a></li>
+            <li class="sidenav__list-item"><a href="${pageContext.request.contextPath}/list">View Tutorials</a></li>
+            <li class="sidenav__list-item"><a href="http://reactjs.org">About Us</a></li>
+            <li class="sidenav__list-item"><a href="http://reactjs.org">Contact Us</a></li>
+        </ul>
+    </aside>
+    <main class="main">
 
-        <label for="tut_name">Enter TutorName: </label>
-        <form:input id="tut_name" cssClass="form-control" path="tutname" />
+        <div class="container">
+            <h3 id="form_header" class="text-dark" align="center">Tutorial form</h3>
+            <div> </div>
 
-        <label for="desc">Enter Description: </label>
-        <form:input id="desc" cssClass="form-control" path="description" />
+            <!-- User input form to add a new user or update the existing user-->
+            <c:url var="saveUrl" value="/" />
+            <form:form id="user_form" modelAttribute="userAttr" method="POST" action="/save">
+                <form:hidden path="id" />
 
-        <label for="url">Enter URL: </label>
-        <form:input id="url" cssClass="form-control" path="url" />
+                <label for="name">Enter Tutorial Name: </label>
+                <form:input id="name" cssClass="form-control" path="name" />
 
-        <br>
+                <label for="tut_name">Enter TutorName: </label>
+                <form:input id="tut_name" cssClass="form-control" path="tutname" />
 
-        <button id="saveBtn" type="submit" class="btn btn-primary">Save</button>
-    </form:form>
+                <label for="desc">Enter Description: </label>
+                <form:input id="desc" cssClass="form-control" path="description" />
+
+                <label for="url">Enter URL: </label>
+                <form:input id="url" cssClass="form-control" path="url" />
+
+                <br>
+
+                <button id="saveBtn" type="submit" class="btn btn-primary" onclick="update()">Save</button>
+            </form:form>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer__copyright">&copy; 2019</div>
+        <div class="footer__signature">THARUSHA WIJAYABAHU/Muaaz Ahamed</div>
+    </footer>
 </div>
+<script type="text/javascript">
+        function update(){
+            alert("Tutorial successfully Updated!");
+        }
+</script>
 </body>
 </html>

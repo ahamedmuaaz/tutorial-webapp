@@ -80,8 +80,8 @@
 
 </head>
 <body>
-<h2 align="center">Today is <fmt:formatDate value="${today}" pattern="yyy-MM-dd" /></h2>
-<h2 align="center">Tutorials </h2>
+<h3 align="center"><fmt:formatDate value="${today}" pattern="yyy-MM-dd" /></h3>
+<h1 align="center">The Online Library</h1>
 
 <!--Simple dashboard grid layout-->
 <div class="grid-container">
@@ -94,7 +94,11 @@
             <li class="sidenav__list-item"><a href="http://reactjs.org">React</a></li>
         </ul>
     </aside>
-    <main class="main"></main>
+    <main class="main">
+        <h1>Tharusha</h1>
+
+
+    </main>
     <footer class="footer">
         <div class="footer__copyright">&copy; 2019</div>
         <div class="footer__signature">THARUSHA WIJAYABAHU</div>

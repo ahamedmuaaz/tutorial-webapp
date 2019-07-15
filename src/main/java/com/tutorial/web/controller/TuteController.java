@@ -12,9 +12,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import java.util.Date;
 import java.util.List;
 
@@ -26,14 +23,13 @@ public class TuteController {
     @Autowired
     private TutorialRepository repository;
 
-    //@Resource(name="TutorialService")
-    //private TutorialService TuteService;
-
     @RequestMapping(value = "/", method = RequestMethod.GET)
-    public  String index(Model model){
-        model.addAttribute("today", new Date());
+    public  String index(Model modal){
+        List<Tutorial> listtut=repository.findAll();
+        modal.addAttribute("tutelist",listtut);
+        modal.addAttribute("today", new Date());
 
-        return "index";
+        return "viewlist";
 
     }
 
@@ -43,6 +39,8 @@ public class TuteController {
 
         List<Tutorial> listtut=repository.findAll();
         modal.addAttribute("tutelist",listtut);
+        modal.addAttribute("today", new Date());
+
 
         return "viewlist";
     }
@@ -56,7 +54,7 @@ public class TuteController {
     @RequestMapping(value="/edit",method=RequestMethod.GET)
     public String edittute(@RequestParam(value="id", required=true) int id, Model model){
         model.addAttribute("userAttr",repository.findById(id));
-
+        model.addAttribute("today",new Date());
         return "form";
     }
 
@@ -64,6 +62,7 @@ public class TuteController {
     public String viewtute(@RequestParam(value="id", required=true) int id, Model model){
         model.addAttribute("tute",repository.findById(id));
 
+        model.addAttribute("today",new Date());
         return "tutorial";
     }
 
@@ -77,15 +76,17 @@ public class TuteController {
 
     @RequestMapping(value = "/add", method = RequestMethod.GET)
     public String addForm(Model modal) {
+        modal.addAttribute("today",new Date());
         modal.addAttribute("addAttr",new Tutorial());
         return "add";
     }
 
-    @RequestMapping(value = "/deleteTut", method = RequestMethod.POST)
-    public String delete(HttpServletRequest req, HttpServletResponse resp) {
-        int value = Integer.valueOf(req.getParameter("id"));
+    @RequestMapping(value = "/deleteTut",method=RequestMethod.GET)
+    public String delete(@RequestParam(value="id", required=true) int id) {
 
-        repository.deleteTutorialById(value);
+
+
+        repository.deleteTutorialById(id);
         //TuteService.edit(tut);
 
 
