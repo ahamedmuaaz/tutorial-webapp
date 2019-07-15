@@ -14,17 +14,19 @@ public class Tutorial implements Serializable {
     private String tutname;
     private String description;
     private String url;
+    private String imageUrl;
 
 
-    public Tutorial() {
-    }
-
-    public Tutorial(int id, String name, String tutname, String description, String url) {
+    public Tutorial(int id, String name, String tutname, String description, String url, String imageUrl) {
         this.id = id;
         this.name = name;
         this.tutname = tutname;
         this.description = description;
         this.url = url;
+        this.imageUrl = imageUrl;
+    }
+
+    public Tutorial() {
     }
 
     public int getId() {
@@ -65,5 +67,12 @@ public class Tutorial implements Serializable {
 
     public void setUrl(String url) {
         this.url = url;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
 }

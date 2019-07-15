@@ -29,7 +29,7 @@ public class TuteController {
         modal.addAttribute("tutelist",listtut);
         modal.addAttribute("today", new Date());
 
-        return "viewlist";
+        return "AdminView/viewlist";
 
     }
 
@@ -42,7 +42,7 @@ public class TuteController {
         modal.addAttribute("today", new Date());
 
 
-        return "viewlist";
+        return "AdminView/viewlist";
     }
 
     @RequestMapping(value = "/save", method = RequestMethod.POST)
@@ -55,7 +55,7 @@ public class TuteController {
     public String edittute(@RequestParam(value="id", required=true) int id, Model model){
         model.addAttribute("userAttr",repository.findById(id));
         model.addAttribute("today",new Date());
-        return "form";
+        return "AdminView/form";
     }
 
     @RequestMapping(value="/tut",method=RequestMethod.GET)
@@ -63,7 +63,7 @@ public class TuteController {
         model.addAttribute("tute",repository.findById(id));
 
         model.addAttribute("today",new Date());
-        return "tutorial";
+        return "AdminView/tutorial";
     }
 
     @RequestMapping(value = "/addTut", method = RequestMethod.POST)
@@ -78,7 +78,7 @@ public class TuteController {
     public String addForm(Model modal) {
         modal.addAttribute("today",new Date());
         modal.addAttribute("addAttr",new Tutorial());
-        return "add";
+        return "AdminView/add";
     }
 
     @RequestMapping(value = "/deleteTut",method=RequestMethod.GET)
@@ -95,7 +95,7 @@ public class TuteController {
     @RequestMapping(value = "/delete", method = RequestMethod.GET)
     public String deleteTut(Model model) {
 
-        return "delete";
+        return "AdminView/delete";
     }
 
 

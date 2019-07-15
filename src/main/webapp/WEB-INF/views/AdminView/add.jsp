@@ -133,6 +133,8 @@
                     <label for="url">Enter URL: </label>
                     <form:input id="url" cssClass="form-control" path="url" />
 
+                    <label for="imageUrl">Enter Image URL: </label>
+                    <form:input id="imageUrl" cssClass="form-control" path="imageUrl" />
                     <br>
 
                     <button id="saveBtn" type="submit" class="btn btn-primary" onclick="confirmAdd()">Save</button>
