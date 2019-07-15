@@ -13,9 +13,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import java.util.Date;
 import java.util.List;
 
 
@@ -32,7 +29,7 @@ public class TuteController {
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public  String index(Model model){
 
-        model.addAttribute("today", new Date());
+
         return "index";
 
     }
@@ -49,50 +46,24 @@ public class TuteController {
 
     @RequestMapping(value = "/save", method = RequestMethod.POST)
     public String save(@ModelAttribute("userAttr") Tutorial tut) {
-
-        repository.save(tut);
-
-
+          repository.save(tut);
         return "redirect:list";
     }
 
     @RequestMapping(value="/edit",method=RequestMethod.GET)
     public String edittute(@RequestParam(value="id", required=true) int id, Model model){
-
         model.addAttribute("userAttr",repository.findById(id));
 
         return "form";
     }
 
-    @RequestMapping(value = "/addTut", method = RequestMethod.POST)
-    public String addTute(@ModelAttribute("addAttr") Tutorial tut) {
-        repository.save(tut);
+    @RequestMapping(value="/tut",method=RequestMethod.GET)
+    public String viewtute(@RequestParam(value="id", required=true) int id, Model model){
+        model.addAttribute("tute",repository.findById(id));
 
-
-        return "redirect:add";
+        return "tutorial";
     }
 
-   @RequestMapping(value = "/add", method = RequestMethod.GET)
-    public String addForm(Model modal) {
-        modal.addAttribute("addAttr",new Tutorial());
-        return "add";
-    }
-
-    @RequestMapping(value = "/deleteTut", method = RequestMethod.POST)
-    public String delete(HttpServletRequest req, HttpServletResponse resp) {
-       int value = Integer.valueOf(req.getParameter("id"));
-
-        repository.deleteTutorialById(value);
-        //TuteService.edit(tut);
-
-
-        return "redirect:list";
-    }
-    @RequestMapping(value = "/delete", method = RequestMethod.GET)
-    public String deleteTut(Model model) {
-
-        return "delete";
-    }
 
 
 

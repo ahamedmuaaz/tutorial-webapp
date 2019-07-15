@@ -66,15 +66,4 @@ public class Tutorial implements Serializable {
     public void setUrl(String url) {
         this.url = url;
     }
-
-    @Override
-    public String toString() {
-        return "Tutorial{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", tutname='" + tutname + '\'' +
-                ", description='" + description + '\'' +
-                ", url='" + url + '\'' +
-                '}';
-    }
 }
