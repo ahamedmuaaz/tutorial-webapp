@@ -27,6 +27,10 @@
             grid-template-areas: "sidenav header" "sidenav main" "sidenav footer";
             height: 100vh;
         }
+        hr{
+            color: grey;
+            background-color: grey;
+        }
 
         /* Give every child element its grid name */
         .header {
@@ -118,8 +122,8 @@
             <li class="sidenav__list-item"><a href="http://reactjs.org">Contact Us</a></li>
         </ul>
     </aside>
-    <main class="main">
-
+    <main class="main bg-dark">
+        <!--
         <div class="container">
 
             <div style="margin:auto;width: 50%;margin-top:20%">
@@ -154,10 +158,10 @@
                     <a id="update" href="${editUrl}" class="btn btn-warning">Update</a>
                 </p>
             </div>
-        </div>
+        </div>-->
 
 
-       <%-- <div class="container">--%>
+        <div class="container">
             <%--     <nav class="navbar-expand-lg navbar-dark bg-dark">
 
                      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -202,7 +206,7 @@
                  </nav>--%>
 
 
-         <%--   <div class="bg-dark">
+            <div class="bg-dark">
                 <hr>
                 <c:set var="namelower" value="${tute.getName()}"/>
                 <c:set var="nametoupper" value="${fn:toUpperCase(namelower)}"/>
@@ -263,7 +267,7 @@
                         </div>
 
                     </div>
-                </div>--%>
+                </div>
 
 
                 <!-- Optional JavaScript -->
