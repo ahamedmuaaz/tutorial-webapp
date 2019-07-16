@@ -71,7 +71,7 @@
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <html>
 <head>
 
@@ -89,10 +89,7 @@
             display: grid;
             grid-template-columns: 240px 1fr;
             grid-template-rows: 50px 1fr 50px;
-            grid-template-areas:
-                    "sidenav header"
-                    "sidenav main"
-                    "sidenav footer";
+            grid-template-areas: "sidenav header" "sidenav main" "sidenav footer";
             height: 100vh;
         }
 
@@ -116,6 +113,7 @@
             grid-area: footer;
             background-color: #648ca6;
         }
+
         .header, .footer {
             display: flex;
             align-items: center;
@@ -130,15 +128,18 @@
             grid-area: sidenav;
             background-color: #394263;
         }
+
         .sidenav__list {
             padding: 0;
             margin-top: 85px;
             list-style-type: none;
         }
+
         .sidenav__list-item {
             padding: 20px 20px 20px 40px;
             color: #ddd;
         }
+
         .sidenav__list-item:hover {
             background-color: rgba(255, 255, 255, 0.2);
             cursor: pointer;
@@ -157,6 +158,9 @@
             background-color: #394262;
             border-color: black;
         }
+        .btngroup{
+            float: right;
+        }
 
     </style>
 
@@ -164,11 +168,16 @@
 <body>
 
 <h1 align="center">The Online Library</h1>
-<h5 align="center"><fmt:formatDate value="${today}" pattern="yyy-MM-dd" /></h5>
+<h5 align="center"><fmt:formatDate value="${today}" pattern="yyy-MM-dd"/></h5>
 
 <!--Simple dashboard grid layout-->
 <div class="grid-container">
-    <header class="header"></header>
+    <header class="header">
+        <div class="btn-group btngroup" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-secondary">Student</button>
+            <button type="button" class="btn btn-secondary">Admin</button>
+        </div>
+    </header>
     <aside class="sidenav">
         <ul class="sidenav__list">
             <li class="sidenav__list-item"><a href="${pageContext.request.contextPath}/add">Add Tutorial</a></li>
@@ -180,9 +189,10 @@
     <main class="main">
 
         <div class="container">
-            <p  class="text-center" style="color: black; border: 5px solid black; letter-spacing: 5px; padding: 10px;"><b>List Of Tutorials Available</b>
+            <p class="text-center" style="color: black; border: 5px solid black; letter-spacing: 5px; padding: 10px;">
+                <b>List Of Tutorials Available</b>
             </p>
-                <c:forEach var="emp" items="${tutelist}">
+            <c:forEach var="emp" items="${tutelist}">
                 <ul style="font-family: Arial; font-size: 14pt;">
 
 
@@ -196,17 +206,19 @@
 
                             <p>
                                 <button id="update" class="btn btn-success"
-                                        onclick="viewMethod(${emp.getId()})">View</button>
+                                        onclick="viewMethod(${emp.getId()})">View
+                                </button>
 
                                 <button id="Delete" class="btn btn-success"
-                                    onclick="confirmDelete(${emp.getId()})">Delete</button>
+                                        onclick="confirmDelete(${emp.getId()})">Delete
+                                </button>
                             </p>
-                    </div>
+                        </div>
                     </div>
 
-                    </ul>
-                    <hr>
-                    </c:forEach>
+                </ul>
+                <hr>
+            </c:forEach>
 
         </div>
     </main>
@@ -217,11 +229,11 @@
 </div>
 <script type="text/javascript">
 
-    function confirmDelete(id){
+    function confirmDelete(id) {
         if (confirm('Are you sure you want to Delete this Tutorial')) {
             console.log(id);
 
-            window.location.assign("/deleteTut?id="+id);
+            window.location.assign("/deleteTut?id=" + id);
             alert("Tutorial successfully deleted!");
 
             // Save it!
@@ -229,8 +241,9 @@
             alert("Tutorial not deleted!");
         }
     }
-    function viewMethod(id){
-        window.location.assign("/tut?id="+id);
+
+    function viewMethod(id) {
+        window.location.assign("/tut?id=" + id);
     }
 </script>
 </body>
