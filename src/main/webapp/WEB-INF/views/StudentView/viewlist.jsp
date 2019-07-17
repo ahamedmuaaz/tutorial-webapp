@@ -20,40 +20,41 @@
         -->
     </style>
 </head>
-<body>
+<body class="bg-dark ">
 
-<h1 align="center">The Online Library</h1>
-<h5 align="center"><fmt:formatDate value="${today}" pattern="yyy-MM-dd"/></h5>
+<h1 align="center" class="bodyfont">The Online Library</h1>
+<h5 align="center" class="datefont"><fmt:formatDate value="${today}" pattern="yyy-MM-dd"/></h5>
 
 <!--Simple dashboard grid layout-->
 <div class="grid-container">
-    <header class="header"></header>
+    <header class="header">
+        <div class= "pull-right">
+            <button type="button" class="btn btn-secondary pull-right" onclick="gotostudent()">Student</button>
+            <button type="button" class="btn btn-secondary pull-right" onclick="gotoadmin()">Admin</button>
+        </div>
+    </header>
     <aside class="sidenav">
         <ul class="sidenav__list">
-            <li class="sidenav__list-item"><a href="${pageContext.request.contextPath}/add">Add Tutorial</a></li>
-            <li class="sidenav__list-item"><a href="${pageContext.request.contextPath}/list">View Tutorials</a></li>
+            <li class="sidenav__list-item"><a href="${pageContext.request.contextPath}/client">View Tutorials</a></li>
             <li class="sidenav__list-item"><a href="http://reactjs.org">About Us</a></li>
             <li class="sidenav__list-item"><a href="http://reactjs.org">Contact Us</a></li>
         </ul>
     </aside>
-    <main class="main">
+    <main class="main bg-dark">
         <div class="container">
             <div class="row">
                 <c:forEach var="tut" items="${tutelist}" varStatus="loop">
 
 
-                    <div class="col-md-4">
+                    <div class="col-md-4 text-center">
                         <div class="card" style="width: 250px; margin-bottom: 10px;margin-top: 10px">
                             <img class="card-img-top" src="${tut.getImageUrl()}" alt=""
-                                 style=" width: 250px;height:250px">
-                            <div class="card-body">
-                                <h3 class="card-title">${tut.getName()}</h3>
+                                 style=" width: 249px;height:250px">
+                            <div class="card-body text-center">
+                                <h4 class="card-title">${tut.getName()}</h4>
 
-                                <div class="row">
-                                    <p><b>${tut.getDescription()}</b></p>
-                                </div>
-                                <div class="row">
-                                    <h6>Conducted by : ${tut.getTutname()}</h6>
+                                <div class="text-center">
+                                    <p class="text-center"> Conducted by : ${tut.getTutname()}</p>
                                 </div>
                                 <div class="text-center">
                                     <button id="update" class="btn btn-primary"
@@ -75,6 +76,14 @@
 <script type="text/javascript">
     function viewMethod(id) {
         window.location.assign("/client/view?id=" + id);
+    }
+    function gotoadmin() {
+        window.location.assign("/");
+    }
+
+    function gotostudent() {
+        window.location.assign("/client");
+
     }
 </script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

@@ -28,6 +28,11 @@
 .footer {
     grid-area: footer;
     background-color: #648ca6;
+    font-weight: bold;
+    font-family: red-serif;
+    color: white;
+    font-size: 12px;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px #ff213f;
 }
 .header, .footer {
     display: flex;
@@ -69,4 +74,27 @@ a:link, a:visited {
 a:hover, a:active {
     background-color: #394262;
     border-color: black;
+}
+.bodyfont{
+    font-style:italic;
+    color:white;
+    font-size: 40px;
+    font-family:Consolas;
+
+}
+.datefont{
+    font-style: oblique;
+    color:white;
+}
+hr{
+    background-color:darkgray;
+}
+.adminTitile{
+    font-style:italic;
+    font-size: 40px;
+    font-family:Consolas;
+
+}
+.adminDate{
+    font-style: oblique;
 }

@@ -92,11 +92,5 @@ public class TuteController {
 
         return "redirect:list";
     }
-    @RequestMapping(value = "/delete", method = RequestMethod.GET)
-    public String deleteTut(Model model) {
-
-        return "AdminView/delete";
-    }
-
 
 }

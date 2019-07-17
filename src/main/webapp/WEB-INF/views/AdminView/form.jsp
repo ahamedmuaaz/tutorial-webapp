@@ -24,12 +24,17 @@
 </head>
 <body>
 
-<h1 align="center">The Online Library</h1>
-<h5 align="center"><fmt:formatDate value="${today}" pattern="yyy-MM-dd" /></h5>
+<h1 align="center" class="adminTitile">The Online Library</h1>
+<h5 align="center" class="adminDate"><fmt:formatDate value="${today}" pattern="yyy-MM-dd" /></h5>
 
 <!--Simple dashboard grid layout-->
 <div class="grid-container">
-    <header class="header"></header>
+    <header class="header">
+        <div class= "pull-right">
+            <button type="button" class="btn btn-secondary pull-right" onclick="gotostudent()">Student</button>
+            <button type="button" class="btn btn-secondary pull-right" onclick="gotoadmin()">Admin</button>
+        </div>
+    </header>
     <aside class="sidenav">
         <ul class="sidenav__list">
             <li class="sidenav__list-item"><a href="${pageContext.request.contextPath}/add">Add Tutorial</a></li>
@@ -61,6 +66,9 @@
                 <label for="url">Enter URL: </label>
                 <form:input id="url" cssClass="form-control" path="url" />
 
+                <label for="imageUrl">Enter Image URL: </label>
+                <form:input id="imageUrl" cssClass="form-control" path="imageUrl" />
+
                 <br>
 
                 <button id="saveBtn" type="submit" class="btn btn-primary" onclick="update()">Save</button>
@@ -75,6 +83,14 @@
 <script type="text/javascript">
         function update(){
             alert("Tutorial successfully Updated!");
+        }
+        function gotoadmin() {
+            window.location.assign("/");
+        }
+
+        function gotostudent() {
+            window.location.assign("/client");
+
         }
 </script>
 </body>

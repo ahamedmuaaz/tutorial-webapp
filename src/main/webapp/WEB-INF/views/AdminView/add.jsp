@@ -26,12 +26,17 @@
 </head>
 <body>
 
-<h1 align="center">The Online Library</h1>
-<h5 align="center"><fmt:formatDate value="${today}" pattern="yyy-MM-dd" /></h5>
+<h1 align="center" class="adminTitile">The Online Library</h1>
+<h5 align="center" class="adminDate"><fmt:formatDate value="${today}" pattern="yyy-MM-dd" /></h5>
 
 <!--Simple dashboard grid layout-->
 <div class="grid-container">
-    <header class="header"></header>
+    <header class="header">
+        <div class= "pull-right">
+            <button type="button" class="btn btn-secondary pull-right" onclick="gotostudent()">Student</button>
+            <button type="button" class="btn btn-secondary pull-right" onclick="gotoadmin()">Admin</button>
+        </div>
+    </header>
     <aside class="sidenav">
         <ul class="sidenav__list">
             <li class="sidenav__list-item"><a href="${pageContext.request.contextPath}/add">Add Tutorial</a></li>
@@ -46,7 +51,7 @@
         <div class="container">
 
             <div class="col">
-                <h3 align = "center">Tutorial</h3>
+                <h3 align = "center">Add Tutorial Form</h3>
 
                 <form:form id="user_form" modelAttribute="addAttr" method="POST" action="/save">
                     <label for="id">Enter ID: </label>
@@ -84,6 +89,14 @@
 
     function confirmAdd(id){
         alert("Tutorial successfully Added!");
+    }
+    function gotoadmin() {
+        window.location.assign("/");
+    }
+
+    function gotostudent() {
+        window.location.assign("/client");
+
     }
 </script>
 </body>
