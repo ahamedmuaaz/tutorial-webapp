@@ -23,16 +23,18 @@
 </head>
 <body>
 
-<h1 align="center">The Online Library</h1>
-<h5 align="center"><fmt:formatDate value="${today}" pattern="yyy-MM-dd"/></h5>
+<h1 align="center" class="adminTitile">The Online Library</h1>
+<h5 align="center" class="adminDate"><fmt:formatDate value="${today}" pattern="yyy-MM-dd"/></h5>
 
 <!--Simple dashboard grid layout-->
 <div class="grid-container">
     <header class="header">
-        <div class="btn-group btngroup" role="group" aria-label="Basic example">
-            <button type="button" class="btn btn-secondary">Student</button>
-            <button type="button" class="btn btn-secondary">Admin</button>
+
+        <div >
+            <button type="button" class="btn btn-secondary" onclick="gotostudent()">Student</button>
+            <button type="button" class="btn btn-secondary" onclick="gotoadmin()">Admin</button>
         </div>
+
     </header>
     <aside class="sidenav">
         <ul class="sidenav__list">
@@ -61,12 +63,15 @@
                             <!-- rating.js file -->
 
                             <p>
-                                <button id="update" class="btn btn-success"
+                                <button id="view" class="btn btn-success"
                                         onclick="viewMethod(${emp.getId()})">View
                                 </button>
 
                                 <button id="Delete" class="btn btn-success"
                                         onclick="confirmDelete(${emp.getId()})">Delete
+                                </button>
+                                <button id="update" class="btn btn-success"
+                                        onclick="confirmUpdate(${emp.getId()})">Update
                                 </button>
                             </p>
                         </div>
@@ -97,9 +102,23 @@
             alert("Tutorial not deleted!");
         }
     }
+    function confirmUpdate(id) {
+
+        window.location.assign("/edit?id=" + id);
+
+    }
 
     function viewMethod(id) {
         window.location.assign("/tut?id=" + id);
+    }
+
+    function gotoadmin() {
+        window.location.assign("/");
+    }
+
+    function gotostudent() {
+        window.location.assign("/client");
+
     }
 </script>
 </body>

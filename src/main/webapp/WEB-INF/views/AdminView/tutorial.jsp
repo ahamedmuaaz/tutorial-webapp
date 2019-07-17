@@ -26,14 +26,19 @@
     </style>
 
 </head>
-<body class="bg-dark">
+<body >
 
-<h1 align="center" class="colormatch">The Online Library</h1>
-<h5 align="center" class="colormatch"><fmt:formatDate value="${today}" pattern="yyy-MM-dd"/></h5>
+<h1 align="center" class="adminTitile">The Online Library</h1>
+<h5 align="center" class="adminDate"><fmt:formatDate value="${today}" pattern="yyy-MM-dd"/></h5>
 
 <!--Simple dashboard grid layout-->
 <div class="grid-container">
-    <header class="header"></header>
+    <header class="header">
+        <div class="pull-right">
+            <button type="button" class="btn btn-secondary pull-right" onclick="gotostudent()">Student</button>
+            <button type="button" class="btn btn-secondary pull-right" onclick="gotoadmin()">Admin</button>
+        </div>
+    </header>
     <aside class="sidenav">
         <ul class="sidenav__list">
             <li class="sidenav__list-item"><a href="${pageContext.request.contextPath}/add">Add Tutorial</a></li>
@@ -44,61 +49,66 @@
     </aside>
     <main class="main">
 
-        <div class="container">
+        <div class="container text-center">
 
-            <div style="margin:auto;width: 50%;margin-top:20%">
-                <div class="row">
-                    <div class="col-4"><p>Tutorial Name:</p> </div>
-                    <div class="col-8">
-                        <p>${tute.getName()}</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-4"><p>Tutor Name:</p> </div>
-                    <div class="col-8">
-                        <p>${tute.getTutname()}</p>
-                    </div>
+            <div style="margin:auto;">
+                <div class="row text-center">
+                    <img class="rounded mx-auto d-block" src="${tute.imageUrl}" alt="not found" width="250px"
+                         height="250px"/>
                 </div>
 
-                <div class="row">
-                    <div class="col-4"><p>About:</p> </div>
-                    <div class="col-8">
-                        <p>${tute.getDescription()}</p>
-                    </div>
-                </div>
 
-                <div class="row">
-                    <div class="col-4"><p>Link:</p> </div>
-                    <div class="col-8">
-                        <p>${tute.getUrl()}</p>
-                    </div>
-                </div>
+                <h4>Tutorial Name :
+                ${tute.getName()}</h4>
 
-                <p><c:url var="editUrl" value="/edit?id=${tute.getId()}" />
-                    <a id="update" href="${editUrl}" class="btn btn-warning">Update</a>
-                </p>
-            </div>
+            <p>Tutor Name :
+            ${tute.getTutname()}</p>
+
+            <p style=" border: 1px solid black;
+              padding: 10px;
+              width: 50%;
+              height: auto;
+              margin: auto;
+              text-align: justify; ">
+
+            ${tute.getDescription()}</p>
+
+                <br>
+            <p>Link :
+
+            ${tute.getUrl()}</p>
+
+
         </div>
 
-                <!-- Optional JavaScript -->
-                <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-                <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-                        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-                        crossorigin="anonymous"></script>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-                        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-                        crossorigin="anonymous"></script>
-                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-                        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-                        crossorigin="anonymous"></script>
-    </main>
-    <footer class="footer">
-        <div class="footer__copyright">&copy; 2019</div>
-        <div class="footer__signature">THARUSHA WIJAYABAHU / MUAAZ AHAMED</div>
-    </footer>
+
+</main>
+<footer class="footer">
+    <div class="footer__copyright">&copy; 2019</div>
+    <div class="footer__signature">THARUSHA WIJAYABAHU / MUAAZ AHAMED</div>
+</footer>
 </div>
 <script type="text/javascript">
+    function gotoadmin() {
+        window.location.assign("/");
+    }
+
+    function gotostudent() {
+        window.location.assign("/client");
+
+    }
 
 </script>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
 </body>
 </html>

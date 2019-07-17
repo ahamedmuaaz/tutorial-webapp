@@ -26,15 +26,19 @@
     </style>
 </head>
 <body class="bg-dark">
-<h1 align="center" class="colormatch">The Online Library</h1>
-<h5 align="center" class="colormatch"><fmt:formatDate value="${today}" pattern="yyy-MM-dd"/></h5>
+<h1 align="center" class="bodyfont">The Online Library</h1>
+<h5 align="center" class="datefont"><fmt:formatDate value="${today}" pattern="yyy-MM-dd"/></h5>
 <!--Simple dashboard grid layout-->
 <div class="grid-container">
-    <header class="header"></header>
+    <header class="header">
+        <div >
+            <button type="button" class="btn btn-secondary" onclick="gotostudent()">Student</button>
+            <button type="button" class="btn btn-secondary" onclick="gotoadmin()">Admin</button>
+        </div>
+    </header>
     <aside class="sidenav">
         <ul class="sidenav__list">
-            <li class="sidenav__list-item"><a href="${pageContext.request.contextPath}/add">Add Tutorial</a></li>
-            <li class="sidenav__list-item"><a href="${pageContext.request.contextPath}/list">View Tutorials</a></li>
+            <li class="sidenav__list-item"><a href="${pageContext.request.contextPath}/client">View Tutorials</a></li>
             <li class="sidenav__list-item"><a href="http://reactjs.org">About Us</a></li>
             <li class="sidenav__list-item"><a href="http://reactjs.org">Contact Us</a></li>
         </ul>
@@ -43,10 +47,10 @@
         <div class="container">
 
             <div class="bg-dark">
-                <hr>
+
                 <c:set var="namelower" value="${tute.getName()}"/>
                 <c:set var="nametoupper" value="${fn:toUpperCase(namelower)}"/>
-                <p class="colormatch"><b>ALL TUTORIALS / VIEW / ${nametoupper}</b></p>
+                <p class="datefont"><b>ALL TUTORIALS / VIEW / ${nametoupper}</b></p>
                 <div class="row">
                     <div class="col-5">
                         <img src="${tute.getImageUrl()}"
@@ -118,6 +122,14 @@
 </div>
 <script type="text/javascript">
 
+    function gotoadmin() {
+        window.location.assign("/");
+    }
+
+    function gotostudent() {
+        window.location.assign("/client");
+
+    }
 </script>
 </body>
 </html>
