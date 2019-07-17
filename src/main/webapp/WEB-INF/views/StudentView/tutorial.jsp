@@ -102,6 +102,10 @@
             letter-spacing: 3px;
             font-style: oblique;
         }
+        .contentrow{
+
+
+        }
 
     </style>
 
@@ -213,12 +217,14 @@
                 <p class="colormatch"><b>ALL TUTORIALS / VIEW / ${nametoupper}</b></p>
 
                 <div class="row">
-                    <div class="col-4">
+
+                    <div class="col-5">
                         <img src="${tute.getImageUrl()}"
                              alt="No image" width="350px" height="400">
 
                     </div>
-                    <div class="col-8">
+
+                    <div class="col-7 contentrow">
                         <h1 style="color: white">${nametoupper}</h1>
                         <p style="color:skyblue;font-size: 20px; font-family: Baskerville, 'Palatino Linotype', Palatino, 'Century Schoolbook L', 'Times New Roman', 'serif'">
                             Online</p>
@@ -226,20 +232,20 @@
 
                         <hr>
                         <div class="row">
-                            <div class="col-4">
+                            <div class="col-3">
                                 <p style="color: white">DESCRIPTION</p>
                             </div>
-                            <div class="col-8">
+                            <div class="col-9">
                                 <p style="color: white">${tute.getDescription()}</p>
                             </div>
                         </div>
 
                         <hr>
                         <div class="row">
-                            <div class="col-4">
+                            <div class="col-3">
                                 <p style="color: white">TUTORIAL LINK</p>
                             </div>
-                            <div class="col-8">
+                            <div class="col-9">
                                 <a href="${tute.getUrl()}"><p style="color: white">${tute.getUrl()}</p></a>
                             </div>
                         </div>
