@@ -26,7 +26,7 @@
     </style>
 
 </head>
-<body >
+<body>
 
 <h1 align="center" class="adminTitile">The Online Library</h1>
 <h5 align="center" class="adminDate"><fmt:formatDate value="${today}" pattern="yyy-MM-dd"/></h5>
@@ -59,34 +59,30 @@
 
 
                 <h4>Tutorial Name :
-                ${tute.getName()}</h4>
+                    ${tute.getName()}</h4>
 
-            <p>Tutor Name :
-            ${tute.getTutname()}</p>
+                <p>Tutor Name :
+                    ${tute.getTutname()}</p>
 
-            <p style=" border: 1px solid black;
+                <p style=" border: 1px solid black;
               padding: 10px;
               width: 50%;
               height: auto;
               margin: auto;
               text-align: justify; ">
 
-            ${tute.getDescription()}</p>
+                    ${tute.getDescription()}</p>
 
                 <br>
-            <p>Link :
-
-            ${tute.getUrl()}</p>
-
-
-        </div>
-
-
-</main>
-<footer class="footer">
-    <div class="footer__copyright">&copy; 2019</div>
-    <div class="footer__signature">THARUSHA WIJAYABAHU / MUAAZ AHAMED</div>
-</footer>
+                <p>Link :
+                    <a href="${tute.getUrl()}">${tute.getUrl()}</a>
+                </p>
+            </div>
+    </main>
+    <footer class="footer">
+        <div class="footer__copyright">&copy; 2019</div>
+        <div class="footer__signature">THARUSHA WIJAYABAHU / MUAAZ AHAMED</div>
+    </footer>
 </div>
 <script type="text/javascript">
     function gotoadmin() {
