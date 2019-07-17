@@ -80,116 +80,6 @@
             </div>
         </div>
 
-
-       <%-- <div class="container">--%>
-            <%--     <nav class="navbar-expand-lg navbar-dark bg-dark">
-
-                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                         <span class="navbar-toggler-icon"></span>
-                     </button>
-
-                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                         <ul class="navbar-nav mr-auto">
-                             <li class="nav-item active">
-                                 <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                             </li>
-                             <li class="nav-item">
-                                 <a class="nav-link" href="#">Link</a>
-                             </li>
-                             <li class="nav-item dropdown">
-                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                     Dropdown
-                                 </a>
-                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                     <a class="dropdown-item" href="#">Action</a>
-                                     <a class="dropdown-item" href="#">Another action</a>
-                                     <div class="dropdown-divider"></div>
-                                     <a class="dropdown-item" href="#">Something else here</a>
-                                 </div>
-                             </li>
-                             <li class="nav-item">
-                                 <a class="nav-link disabled" href="#">Disabled</a>
-                             </li>
-                         </ul>
-                         <form class="form-inline my-2 my-lg-0">
-                             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                         </form>
-                         <ul class="navbar-nav mr-auto">
-                             <li class="nav-item">
-                                 <a class="nav-link disabled" href="#">Disabled</a>
-                             </li>
-                         </ul>
-                     </div>
-                 </nav>--%>
-
-
-         <%--   <div class="bg-dark">
-                <hr>
-                <c:set var="namelower" value="${tute.getName()}"/>
-                <c:set var="nametoupper" value="${fn:toUpperCase(namelower)}"/>
-                <p class="colormatch"><b>ALL TUTORIALS / VIEW / ${nametoupper}</b></p>
-
-                <div class="row">
-                    <div class="col-4">
-                        <img src="${tute.getImageUrl()}"
-                             alt="No image" width="350px" height="400">
-
-                    </div>
-                    <div class="col-8">
-                        <h1 style="color: white">${nametoupper}</h1>
-                        <p style="color:skyblue;font-size: 20px; font-family: Baskerville, 'Palatino Linotype', Palatino, 'Century Schoolbook L', 'Times New Roman', 'serif'">
-                            Online</p>
-                        <p style="color: grey">ITEM:C-FG4121</p>
-
-                        <hr>
-                        <div class="row">
-                            <div class="col-4">
-                                <p style="color: white">DESCRIPTION</p>
-                            </div>
-                            <div class="col-8">
-                                <p style="color: white">${tute.getDescription()}</p>
-                            </div>
-                        </div>
-
-                        <hr>
-                        <div class="row">
-                            <div class="col-4">
-                                <p style="color: white">TUTORIAL LINK</p>
-                            </div>
-                            <div class="col-8">
-                                <a href="${tute.getUrl()}"><p style="color: white">${tute.getUrl()}</p></a>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="row">
-                            <div class="col-4">
-                                <p style="color: white">RATE TUTORIAL</p>
-                            </div>
-                            <div class="col-8">
-                                <div class="stars" id="stars">
-                                    <form action="">
-                                        <input class="star star-5" id="star-5" type="radio" name="star"/>
-                                        <label class="star star-5" for="star-5" onClick="rating()"></label>
-                                        <input class="star star-4" id="star-4" type="radio" name="star"/>
-                                        <label class="star star-4" for="star-4"></label>
-                                        <input class="star star-3" id="star-3" type="radio" name="star"/>
-                                        <label class="star star-3" for="star-3"></label>
-                                        <input class="star star-2" id="star-2" type="radio" name="star"/>
-                                        <label class="star star-2" for="star-2"></label>
-                                        <input class="star star-1" id="star-1" type="radio" name="star"/>
-                                        <label class="star star-1" for="star-1"></label>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>--%>
-
-
                 <!-- Optional JavaScript -->
                 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
                 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -204,14 +94,11 @@
     </main>
     <footer class="footer">
         <div class="footer__copyright">&copy; 2019</div>
-        <div class="footer__signature">THARUSHA WIJAYABAHU/Muaaz Ahamed</div>
+        <div class="footer__signature">THARUSHA WIJAYABAHU/MUAAZ AHAMED</div>
     </footer>
 </div>
 <script type="text/javascript">
-    /*
-        function confirmAdd(id){
-            alert("Tutorial successfully Added!");
-        }*/
+
 </script>
 </body>
 </html>

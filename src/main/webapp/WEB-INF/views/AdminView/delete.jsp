@@ -35,15 +35,6 @@
             <button id="deleteBtn" type="submit" class="btn btn-primary">Delete</button>
         </form:form>
 
-       <%-- <form method="POST" action="/deleteTut">
-
-        </form>--%>
-        <!--<p class = "pitemSyle">{{ dvdTotal }} DVD's {{messageDVD}}</p>-->
-        <%--<form action="deleteData" method="post">
-
-            <input type="number" class="txt" name="tutId" placeholder="Enter Tutorial ID" required="Required">
-            <input type="submit" class="btn" value="Delete a Tutorial" id = "btnDeleteTut">
-        </form>--%>
 
     </div>
 </div>
