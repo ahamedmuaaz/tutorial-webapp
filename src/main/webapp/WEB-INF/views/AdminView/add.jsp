@@ -77,7 +77,7 @@
     </main>
     <footer class="footer">
         <div class="footer__copyright">&copy; 2019</div>
-        <div class="footer__signature">THARUSHA WIJAYABAHU/MUAAZ AHAMED</div>
+        <div class="footer__signature">THARUSHA WIJAYABAHU / MUAAZ AHAMED</div>
     </footer>
 </div>
 <script type="text/javascript">
