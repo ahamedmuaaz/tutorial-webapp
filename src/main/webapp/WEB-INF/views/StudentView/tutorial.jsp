@@ -39,7 +39,7 @@
     <aside class="sidenav">
         <ul class="sidenav__list">
             <li class="sidenav__list-item"><a href="${pageContext.request.contextPath}/client">View Tutorials</a></li>
-            <li class="sidenav__list-item"><a href="http://reactjs.org">About Us</a></li>
+            <li class="sidenav__list-item"><a href="${pageContext.request.contextPath}/client/about-us">About Us</a></li>
             <li class="sidenav__list-item"><a href="http://reactjs.org">Contact Us</a></li>
         </ul>
     </aside>
@@ -54,10 +54,10 @@
                 <div class="row">
                     <div class="col-5">
                         <img src="${tute.getImageUrl()}"
-                             alt="No image" width="350px" height="400">
+                             alt="No image" width="350px" height="400" style="margin-top: 50px">
                     </div>
                     <div class="col-7 contentrow">
-                        <h1 style="color: white">${nametoupper}</h1>
+                        <h2 style="color: white">${nametoupper}</h2>
                         <p style="color:skyblue;font-size: 20px; font-family: Baskerville, 'Palatino Linotype', Palatino, 'Century Schoolbook L', 'Times New Roman', 'serif'">
                             Online</p>
                         <p style="color: grey">ITEM:C-FG4121</p>

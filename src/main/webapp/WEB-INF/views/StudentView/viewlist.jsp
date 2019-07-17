@@ -36,7 +36,7 @@
     <aside class="sidenav">
         <ul class="sidenav__list">
             <li class="sidenav__list-item"><a href="${pageContext.request.contextPath}/client">View Tutorials</a></li>
-            <li class="sidenav__list-item"><a href="http://reactjs.org">About Us</a></li>
+            <li class="sidenav__list-item"><a href="${pageContext.request.contextPath}/client/about-us">About Us</a></li>
             <li class="sidenav__list-item"><a href="http://reactjs.org">Contact Us</a></li>
         </ul>
     </aside>

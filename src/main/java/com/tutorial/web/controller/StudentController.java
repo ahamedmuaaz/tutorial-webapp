@@ -38,5 +38,11 @@ public class StudentController {
         return "StudentView/tutorial";
     }
 
+    @RequestMapping(value = "/client/about-us", method = RequestMethod.GET)
+    public String viewtute(Model model){
+        model.addAttribute("today",new Date());
+        return "StudentView/aboutUs";
+    }
+
 
 }

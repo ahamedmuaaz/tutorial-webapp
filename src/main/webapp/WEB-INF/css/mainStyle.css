@@ -98,3 +98,7 @@ hr{
 .adminDate{
     font-style: oblique;
 }
+.about{
+    font-weight: bold;
+    font-size: 15px;
+}
