@@ -18,13 +18,16 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="../../../resources/rating.css" type="text/css">
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <<<<<<< HEAD
+
+    /* Assign grid instructions to our parent grid container */
 
     <style type="text/css">
         <!--
         <%@ include file="../../css/mainStyle.css" %>
         <%@ include file="../../css/listView.css" %>
         -->
-
+        >>>>>>> e4942676fb71f79814187db54553e7043ae5f157
     </style>
 </head>
 <body class="bg-dark">
@@ -42,7 +45,79 @@
         </ul>
     </aside>
     <main class="main bg-dark">
+        <!--
         <div class="container">
+            <div style="margin:auto;width: 50%;margin-top:20%">
+                <div class="row">
+                    <div class="col-4"><p>Tutorial Name:</p> </div>
+                    <div class="col-8">
+                        <p>${tute.getName()}</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4"><p>Tutor Name:</p> </div>
+                    <div class="col-8">
+                        <p>${tute.getTutname()}</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4"><p>About:</p> </div>
+                    <div class="col-8">
+                        <p>${tute.getDescription()}</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4"><p>Link:</p> </div>
+                    <div class="col-8">
+                        <p>${tute.getUrl()}</p>
+                    </div>
+                </div>
+                <p><c:url var="editUrl" value="/edit?id=${tute.getId()}" />
+                    <a id="update" href="${editUrl}" class="btn btn-warning">Update</a>
+                </p>
+            </div>
+        </div>-->
+        <div class="container">
+            <%--     <nav class="navbar-expand-lg navbar-dark bg-dark">
+                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                         <span class="navbar-toggler-icon"></span>
+                     </button>
+                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                         <ul class="navbar-nav mr-auto">
+                             <li class="nav-item active">
+                                 <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                             </li>
+                             <li class="nav-item">
+                                 <a class="nav-link" href="#">Link</a>
+                             </li>
+                             <li class="nav-item dropdown">
+                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                     Dropdown
+                                 </a>
+                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                     <a class="dropdown-item" href="#">Action</a>
+                                     <a class="dropdown-item" href="#">Another action</a>
+                                     <div class="dropdown-divider"></div>
+                                     <a class="dropdown-item" href="#">Something else here</a>
+                                 </div>
+                             </li>
+                             <li class="nav-item">
+                                 <a class="nav-link disabled" href="#">Disabled</a>
+                             </li>
+                         </ul>
+                         <form class="form-inline my-2 my-lg-0">
+                             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                         </form>
+                         <ul class="navbar-nav mr-auto">
+                             <li class="nav-item">
+                                 <a class="nav-link disabled" href="#">Disabled</a>
+                             </li>
+                         </ul>
+                     </div>
+                 </nav>--%>
             <div class="bg-dark">
                 <hr>
                 <c:set var="namelower" value="${tute.getName()}"/>
@@ -114,11 +189,14 @@
     </main>
     <footer class="footer">
         <div class="footer__copyright">&copy; 2019</div>
-        <div class="footer__signature">THARUSHA WIJAYABAHU/MUAAZ AHAMED
-        </div>
+        <div class="footer__signature">THARUSHA WIJAYABAHU/Muaaz Ahamed</div>
     </footer>
 </div>
 <script type="text/javascript">
+    /*
+        function confirmAdd(id){
+            alert("Tutorial successfully Added!");
+        }*/
 </script>
 </body>
 </html>
