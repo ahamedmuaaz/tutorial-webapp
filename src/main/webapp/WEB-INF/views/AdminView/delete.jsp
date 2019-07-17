@@ -3,55 +3,10 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <html>
 <head>
-    <style>
-        .container {
-            margin: auto;
-            display: grid;
-            grid-template-columns: 100% auto;
-
-        }
-        .col {
-            margin: auto;
-            padding: .4em 2em;
-        }
-        .color-dark {
-            background: rgba(0, 0, 0, 0.69);
-            color: white;
-        }
-
-
-        input ,[type="number"],[type="date"],[type="text"] {
-            border: 0;
-            padding: 1em;
-            width: 80%;
-            margin-bottom: 2em;
-        }
-        input.btn {
-            border: 0;
-            font-weight: bold;
-            display:block;
-            padding:1em 3em;
-            background:rgb(76, 0, 255);
-            color:white;
-            margin-bottom:1em;
-            cursor:pointer;
-            width: 84.5%;
-        }
-        button {
-            border: 0;
-            font-weight: bold;
-            display:block;
-            padding:1em 3em;
-            background:rgb(76, 0, 255);
-            color:white;
-            margin-bottom:1em;
-            cursor:pointer;
-        }
-        .pitemSyle{
-            text-align: left;
-            font-weight: bold;
-            font-size: 14px;
-        }
+    <style type="text/css">
+        <!--
+        <%@ include file="../../css/mainStyle.css" %>
+        -->
     </style>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 </head>
