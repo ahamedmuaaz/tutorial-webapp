@@ -20,7 +20,7 @@ public class StudentController {
     @Autowired
     private TutorialRepository repository;
 
-    @RequestMapping(value = "/client", method = RequestMethod.GET)
+    @RequestMapping(value = "/", method = RequestMethod.GET)
     public  String index(Model modal){
         List<Tutorial> listtut=repository.findAll();
         modal.addAttribute("tutelist",listtut);
@@ -30,7 +30,7 @@ public class StudentController {
 
     }
 
-    @RequestMapping(value = "/client/view", method = RequestMethod.GET)
+    @RequestMapping(value = "/view", method = RequestMethod.GET)
     public String viewtute(@RequestParam(value="id", required=true) int id, Model model){
         model.addAttribute("tute",repository.findById(id));
 
@@ -38,7 +38,7 @@ public class StudentController {
         return "StudentView/tutorial";
     }
 
-    @RequestMapping(value = "/client/about-us", method = RequestMethod.GET)
+    @RequestMapping(value = "/about-us", method = RequestMethod.GET)
     public String viewtute(Model model){
         model.addAttribute("today",new Date());
         return "StudentView/aboutUs";

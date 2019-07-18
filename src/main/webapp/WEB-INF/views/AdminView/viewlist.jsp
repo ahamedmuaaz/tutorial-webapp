@@ -38,10 +38,8 @@
     </header>
     <aside class="sidenav">
         <ul class="sidenav__list">
-            <li class="sidenav__list-item"><a href="${pageContext.request.contextPath}/add">Add Tutorial</a></li>
-            <li class="sidenav__list-item"><a href="${pageContext.request.contextPath}/list">View Tutorials</a></li>
-            <li class="sidenav__list-item"><a href="http://reactjs.org">About Us</a></li>
-            <li class="sidenav__list-item"><a href="http://reactjs.org">Contact Us</a></li>
+            <li class="sidenav__list-item"><a href="${pageContext.request.contextPath}/admin/add">Add Tutorial</a></li>
+            <li class="sidenav__list-item"><a href="${pageContext.request.contextPath}/admin/list">View Tutorials</a></li>
         </ul>
     </aside>
     <main class="main">
@@ -94,7 +92,7 @@
         if (confirm('Are you sure you want to Delete this Tutorial')) {
             console.log(id);
 
-            window.location.assign("/deleteTut?id=" + id);
+            window.location.assign("/admin/deleteTut?id=" + id);
             alert("Tutorial successfully deleted!");
 
             // Save it!
@@ -104,20 +102,20 @@
     }
     function confirmUpdate(id) {
 
-        window.location.assign("/edit?id=" + id);
+        window.location.assign("/admin/edit?id=" + id);
 
     }
 
     function viewMethod(id) {
-        window.location.assign("/tut?id=" + id);
+        window.location.assign("/admin/tut?id=" + id);
     }
 
     function gotoadmin() {
-        window.location.assign("/");
+        window.location.assign("/admin");
     }
 
     function gotostudent() {
-        window.location.assign("/client");
+        window.location.assign("/");
 
     }
 </script>

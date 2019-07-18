@@ -23,7 +23,7 @@ public class TuteController {
     @Autowired
     private TutorialRepository repository;
 
-    @RequestMapping(value = "/", method = RequestMethod.GET)
+    @RequestMapping(value = "/admin", method = RequestMethod.GET)
     public  String index(Model modal){
         List<Tutorial> listtut=repository.findAll();
         modal.addAttribute("tutelist",listtut);
@@ -33,7 +33,7 @@ public class TuteController {
 
     }
 
-    @RequestMapping(value = "/list", method = RequestMethod.GET)
+    @RequestMapping(value = "/admin/list", method = RequestMethod.GET)
     public String viewAllTutes(Model modal){
 
 
@@ -45,20 +45,20 @@ public class TuteController {
         return "AdminView/viewlist";
     }
 
-    @RequestMapping(value = "/save", method = RequestMethod.POST)
+    @RequestMapping(value = "/admin/save", method = RequestMethod.POST)
     public String save(@ModelAttribute("userAttr") Tutorial tut) {
           repository.save(tut);
         return "redirect:list";
     }
 
-    @RequestMapping(value="/edit",method=RequestMethod.GET)
+    @RequestMapping(value="/admin/edit",method=RequestMethod.GET)
     public String edittute(@RequestParam(value="id", required=true) int id, Model model){
         model.addAttribute("userAttr",repository.findById(id));
         model.addAttribute("today",new Date());
         return "AdminView/form";
     }
 
-    @RequestMapping(value="/tut",method=RequestMethod.GET)
+    @RequestMapping(value="/admin/tut",method=RequestMethod.GET)
     public String viewtute(@RequestParam(value="id", required=true) int id, Model model){
         model.addAttribute("tute",repository.findById(id));
 
@@ -66,22 +66,22 @@ public class TuteController {
         return "AdminView/tutorial";
     }
 
-    @RequestMapping(value = "/addTut", method = RequestMethod.POST)
+    @RequestMapping(value = "/admin/addTut", method = RequestMethod.POST)
     public String addTute(@ModelAttribute("addAttr") Tutorial tut) {
         repository.save(tut);
 
 
-        return "redirect:add";
+        return "redirect:/admin/add";
     }
 
-    @RequestMapping(value = "/add", method = RequestMethod.GET)
+    @RequestMapping(value = "/admin/add", method = RequestMethod.GET)
     public String addForm(Model modal) {
         modal.addAttribute("today",new Date());
         modal.addAttribute("addAttr",new Tutorial());
         return "AdminView/add";
     }
 
-    @RequestMapping(value = "/deleteTut",method=RequestMethod.GET)
+    @RequestMapping(value = "/admin/deleteTut",method=RequestMethod.GET)
     public String delete(@RequestParam(value="id", required=true) int id) {
 
 
@@ -90,7 +90,7 @@ public class TuteController {
         //TuteService.edit(tut);
 
 
-        return "redirect:list";
+        return "redirect:/admin/list";
     }
 
 }

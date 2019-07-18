@@ -41,10 +41,8 @@
     </header>
     <aside class="sidenav">
         <ul class="sidenav__list">
-            <li class="sidenav__list-item"><a href="${pageContext.request.contextPath}/add">Add Tutorial</a></li>
-            <li class="sidenav__list-item"><a href="${pageContext.request.contextPath}/list">View Tutorials</a></li>
-            <li class="sidenav__list-item"><a href="http://reactjs.org">About Us</a></li>
-            <li class="sidenav__list-item"><a href="http://reactjs.org">Contact Us</a></li>
+            <li class="sidenav__list-item"><a href="${pageContext.request.contextPath}/admin/add">Add Tutorial</a></li>
+            <li class="sidenav__list-item"><a href="${pageContext.request.contextPath}/admin/list">View Tutorials</a></li>
         </ul>
     </aside>
     <main class="main">
@@ -86,11 +84,11 @@
 </div>
 <script type="text/javascript">
     function gotoadmin() {
-        window.location.assign("/");
+        window.location.assign("/admin");
     }
 
     function gotostudent() {
-        window.location.assign("/client");
+        window.location.assign("/");
 
     }
 

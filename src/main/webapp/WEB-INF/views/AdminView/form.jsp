@@ -37,10 +37,8 @@
     </header>
     <aside class="sidenav">
         <ul class="sidenav__list">
-            <li class="sidenav__list-item"><a href="${pageContext.request.contextPath}/add">Add Tutorial</a></li>
-            <li class="sidenav__list-item"><a href="${pageContext.request.contextPath}/list">View Tutorials</a></li>
-            <li class="sidenav__list-item"><a href="http://reactjs.org">About Us</a></li>
-            <li class="sidenav__list-item"><a href="http://reactjs.org">Contact Us</a></li>
+            <li class="sidenav__list-item"><a href="${pageContext.request.contextPath}admin/add">Add Tutorial</a></li>
+            <li class="sidenav__list-item"><a href="${pageContext.request.contextPath}admin/list">View Tutorials</a></li>
         </ul>
     </aside>
     <main class="main">
@@ -51,7 +49,7 @@
 
             <!-- User input form to add a new user or update the existing user-->
             <c:url var="saveUrl" value="/" />
-            <form:form id="user_form" modelAttribute="userAttr" method="POST" action="/save">
+            <form:form id="user_form" modelAttribute="userAttr" method="POST" action="/admin/save">
                 <form:hidden path="id" />
 
                 <label for="name">Enter Tutorial Name: </label>
@@ -85,11 +83,11 @@
             alert("Tutorial successfully Updated!");
         }
         function gotoadmin() {
-            window.location.assign("/");
+            window.location.assign("/admin");
         }
 
         function gotostudent() {
-            window.location.assign("/client");
+            window.location.assign("/");
 
         }
 </script>

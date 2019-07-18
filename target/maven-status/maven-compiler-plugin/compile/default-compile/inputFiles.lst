@@ -1,15 +1,6 @@
-<<<<<<< HEAD
-/home/tharusha/Desktop/tutorial-webapp-update_feature/src/main/java/com/tutorial/web/controller/TuteController.java
-/home/tharusha/Desktop/tutorial-webapp-update_feature/src/main/java/com/tutorial/web/WebInitializer.java
-/home/tharusha/Desktop/tutorial-webapp-update_feature/src/main/java/com/tutorial/web/service/TutorialRepository.java
-/home/tharusha/Desktop/tutorial-webapp-update_feature/src/main/java/com/tutorial/web/config/SpringConfig.java
-/home/tharusha/Desktop/tutorial-webapp-update_feature/src/main/java/com/tutorial/web/controller/StudentController.java
-/home/tharusha/Desktop/tutorial-webapp-update_feature/src/main/java/com/tutorial/web/data/Tutorial.java
-=======
 /home/muaaz/Desktop/tutorialwebapplication/src/main/java/com/tutorial/web/WebInitializer.java
 /home/muaaz/Desktop/tutorialwebapplication/src/main/java/com/tutorial/web/controller/StudentController.java
 /home/muaaz/Desktop/tutorialwebapplication/src/main/java/com/tutorial/web/service/TutorialRepository.java
 /home/muaaz/Desktop/tutorialwebapplication/src/main/java/com/tutorial/web/data/Tutorial.java
 /home/muaaz/Desktop/tutorialwebapplication/src/main/java/com/tutorial/web/config/SpringConfig.java
 /home/muaaz/Desktop/tutorialwebapplication/src/main/java/com/tutorial/web/controller/TuteController.java
->>>>>>> 407cfe83080260ad53f227eb0552f49cdf52c1b6

@@ -39,10 +39,8 @@
     </header>
     <aside class="sidenav">
         <ul class="sidenav__list">
-            <li class="sidenav__list-item"><a href="${pageContext.request.contextPath}/add">Add Tutorial</a></li>
-            <li class="sidenav__list-item"><a href="${pageContext.request.contextPath}/list">View Tutorials</a></li>
-            <li class="sidenav__list-item"><a href="http://reactjs.org">About Us</a></li>
-            <li class="sidenav__list-item"><a href="http://reactjs.org">Contact Us</a></li>
+            <li class="sidenav__list-item"><a href="${pageContext.request.contextPath}/admin/add">Add Tutorial</a></li>
+            <li class="sidenav__list-item"><a href="${pageContext.request.contextPath}/admin/list">View Tutorials</a></li>
         </ul>
     </aside>
     <main class="main">
@@ -53,7 +51,7 @@
             <div class="col">
                 <h3 align = "center">Add Tutorial Form</h3>
 
-                <form:form id="user_form" modelAttribute="addAttr" method="POST" action="/save">
+                <form:form id="user_form" modelAttribute="addAttr" method="POST" action="/admin/save">
                     <label for="id">Enter ID: </label>
                     <form:input id="id" cssClass="form-control" path="id" />
 
@@ -91,11 +89,11 @@
         alert("Tutorial successfully Added!");
     }
     function gotoadmin() {
-        window.location.assign("/");
+        window.location.assign("/admin");
     }
 
     function gotostudent() {
-        window.location.assign("/client");
+        window.location.assign("/");
 
     }
 </script>
