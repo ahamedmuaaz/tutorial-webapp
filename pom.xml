@@ -128,11 +128,17 @@
       <version>4.7.0</version>
     </dependency>
 
+      <dependency>
+          <groupId>com.fasterxml.jackson.core</groupId>
+          <artifactId>jackson-databind</artifactId>
+          <version>2.9.9</version>
+      </dependency>
+
   </dependencies>
 
   <build>
-    <finalName>tutorialwebapplication</finalName>
-    <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
+    <!--<finalName>tutorialwebapplication</finalName>
+    <pluginManagement>--><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>
         <plugin>
           <groupId>org.eclipse.jetty</groupId>
@@ -154,10 +160,18 @@
           <version>3.2.2</version>
         </plugin>
 
+          <plugin>
+              <groupId>org.apache.maven.plugins</groupId>
+              <artifactId>maven-compiler-plugin</artifactId>
+              <configuration>
+                  <source>8</source>
+                  <target>8</target>
+              </configuration>
+          </plugin>
 
       </plugins>
-    </pluginManagement>
-    <plugins>
+   <!-- </pluginManagement>-->
+    <!--<plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
@@ -166,6 +180,6 @@
           <target>8</target>
         </configuration>
       </plugin>
-    </plugins>
+    </plugins>-->
   </build>
 </project>
