@@ -14,7 +14,6 @@ public class API_Repository {
     public static void add(Tutorial tut){
 
         restTemplate.postForObject("http://localhost:8090/add",tut,Tutorial.class);
-
     }
 
     public static Tutorial findOneById(int id){
