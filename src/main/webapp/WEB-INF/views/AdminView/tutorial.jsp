@@ -39,10 +39,7 @@
 <!--Simple dashboard grid layout-->
 <div class="grid-container">
     <header class="header">
-        <div class="pull-right">
-            <button type="button" class="btn btn-secondary pull-right" onclick="gotostudent()">Student</button>
-            <button type="button" class="btn btn-secondary pull-right" onclick="gotoadmin()">Admin</button>
-        </div>
+
     </header>
     <aside class="sidenav">
         <ul class="sidenav__list">

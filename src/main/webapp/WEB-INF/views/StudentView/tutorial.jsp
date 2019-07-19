@@ -36,11 +36,9 @@
 <!--Simple dashboard grid layout-->
 <div class="grid-container">
     <header class="header">
-        <div >
-            <button type="button" class="btn btn-secondary" onclick="gotostudent()">Student</button>
-            <button type="button" class="btn btn-secondary" onclick="gotoadmin()">Admin</button>
-        </div>
+
     </header>
+
     <aside class="sidenav">
         <ul class="sidenav__list">
             <li class="sidenav__list-item"><a href="${pageContext.request.contextPath}/student">View Tutorials</a></li>

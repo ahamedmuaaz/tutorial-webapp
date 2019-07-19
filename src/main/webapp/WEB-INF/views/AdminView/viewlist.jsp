@@ -35,10 +35,7 @@
 <div class="grid-container">
     <header class="header">
 
-        <div >
-            <button type="button" class="btn btn-secondary" onclick="gotostudent()">Student</button>
-            <button type="button" class="btn btn-secondary" onclick="gotoadmin()">Admin</button>
-        </div>
+
 
     </header>
     <aside class="sidenav">
