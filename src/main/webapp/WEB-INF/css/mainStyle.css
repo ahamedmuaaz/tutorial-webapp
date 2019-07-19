@@ -102,3 +102,17 @@ hr{
     font-weight: bold;
     font-size: 15px;
 }
+
+.card1{
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #39426294;
+    color: #dddddd;
+    background-clip: border-box;
+    border-radius: .25rem;
+}
