@@ -112,7 +112,7 @@ public class TuteController {
 
        }
         else if(user.equalsIgnoreCase("student")&&pass.equalsIgnoreCase("1234")){
-            return "redirect:/student";
+            return "redirect:/student/home";
 
         }
         else {

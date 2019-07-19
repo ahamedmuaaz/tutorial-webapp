@@ -1,25 +1,11 @@
 function confirmAdd(id){
     alert("Tutorial successfully Added!");
 }
-function gotoadmin() {
-    window.location.assign("/admin");
-}
 
-function gotostudent() {
-    window.location.assign("/student");
-
-}
 function update(){
     alert("Tutorial successfully Updated!");
 }
-function gotoadmin() {
-    window.location.assign("/admin");
-}
 
-function gotostudent() {
-    window.location.assign("/student");
-
-}
 function confirmDelete(id) {
     if (confirm('Are you sure you want to Delete this Tutorial')) {
         console.log(id);
@@ -41,12 +27,6 @@ function confirmUpdate(id) {
 function viewMethod(id) {
     window.location.assign("/admin/tut?id=" + id);
 }
-
-function gotoadmin() {
-    window.location.assign("/admin");
-}
-
-function gotostudent() {
-    window.location.assign("/student");
-
+function viewStudentMethod(id) {
+    window.location.assign("/student/view?id=" + id);
 }

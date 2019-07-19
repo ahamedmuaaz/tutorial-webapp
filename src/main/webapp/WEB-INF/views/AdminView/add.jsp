@@ -53,7 +53,7 @@
 
                 <form:form id="user_form" modelAttribute="addAttr" method="POST" action="/admin/save">
                     <label for="id">Enter ID: </label>
-                    <form:input id="id" cssClass="form-control" path="id" />
+                    <form:input type="number" id="id" cssClass="form-control" path="id" />
 
                     <label for="name">Enter Tutorial Name: </label>
                     <form:input id="name" cssClass="form-control" path="name" />

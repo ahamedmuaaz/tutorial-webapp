@@ -41,5 +41,11 @@ public class StudentController {
         return "StudentView/aboutUs";
     }
 
+    @RequestMapping(value = "/student/home", method = RequestMethod.GET)
+    public String home(Model model) {
+        model.addAttribute("today", new Date());
+        return "StudentView/home";
+    }
+
 
 }
