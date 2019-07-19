@@ -49,7 +49,7 @@
 
 
                     <div class="col-md-4 text-center">
-                        <div class="card" style="width: 250px; margin-bottom: 10px;margin-top: 10px">
+                        <div class="card1" style="width: 250px; margin-bottom: 10px;margin-top: 10px">
                             <img class="card-img-top" src="${tut.getImageUrl()}" alt=""
                                  style=" width: 249px;height:250px">
                             <div class="card-body text-center">
