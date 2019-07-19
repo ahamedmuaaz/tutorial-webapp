@@ -8,30 +8,20 @@ import org.springframework.web.client.RestTemplate;
 import java.util.List;
 
 public class API_Repository {
+
     static RestTemplate  restTemplate = new RestTemplate();
 
-    public static void add(){
-        ResponseEntity<List<Tutorial>> response = restTemplate.exchange(
-                "http://localhost:8090/add",
-                HttpMethod.POST,
-                null,
-                new ParameterizedTypeReference<List<Tutorial>>(){});
-        List<Tutorial> employees = response.getBody();
+    public static void add(Tutorial tut){
 
-        System.out.println(employees);
+        restTemplate.postForObject("http://localhost:8090/add",tut,Tutorial.class);
+
     }
 
-    public void update(){
-        ResponseEntity<List<Tutorial>> response = restTemplate.exchange(
-                "http://localhost:8090/update",
-                HttpMethod.POST,
-                null,
-                new ParameterizedTypeReference<List<Tutorial>>(){});
-        List<Tutorial> employees = response.getBody();
+    public static Tutorial findOneById(int id){
+        Tutorial found=restTemplate.getForObject("http://localhost:8090/find?id="+id,Tutorial.class);
+        return found;
 
-        System.out.println(employees);
     }
-
 
 
     public static void delete(int id){
@@ -48,9 +38,6 @@ public class API_Repository {
                 new ParameterizedTypeReference<List<Tutorial>>(){});
         List<Tutorial> employees = response.getBody();
 
-        for (Tutorial t:employees) System.out.println(t.getName());
-
-        System.out.println(employees);
         return employees;
 
     }
