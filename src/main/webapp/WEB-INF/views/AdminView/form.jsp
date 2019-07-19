@@ -20,6 +20,10 @@
         <%@ include file="../../css/mainStyle.css" %>
         -->
     </style>
+    <script type="text/javascript">
+        <%@include file="../../js/main.js"%>
+    </script>
+
 
 </head>
 <body>
@@ -78,18 +82,5 @@
         <div class="footer__signature">THARUSHA WIJAYABAHU / MUAAZ AHAMED</div>
     </footer>
 </div>
-<script type="text/javascript">
-        function update(){
-            alert("Tutorial successfully Updated!");
-        }
-        function gotoadmin() {
-            window.location.assign("/admin");
-        }
-
-        function gotostudent() {
-            window.location.assign("/student");
-
-        }
-</script>
 </body>
 </html>

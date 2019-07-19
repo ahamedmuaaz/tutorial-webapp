@@ -19,6 +19,10 @@
 
         -->
     </style>
+    <script type="text/javascript">
+        <%@include file="../../js/main.js"%>
+    </script>
+
 </head>
 <body class="bg-dark ">
 

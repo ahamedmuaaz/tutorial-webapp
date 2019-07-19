@@ -21,6 +21,9 @@
         <%@ include file="../../css/mainStyle.css" %>
         -->
     </style>
+    <script type="text/javascript">
+        <%@include file="../../js/main.js"%>
+    </script>
 
 
 </head>
@@ -85,17 +88,7 @@
 </div>
 <script type="text/javascript">
 
-    function confirmAdd(id){
-        alert("Tutorial successfully Added!");
-    }
-    function gotoadmin() {
-        window.location.assign("/admin");
-    }
 
-    function gotostudent() {
-        window.location.assign("/student");
-
-    }
 </script>
 </body>
 </html>

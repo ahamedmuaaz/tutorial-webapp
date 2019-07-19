@@ -103,19 +103,21 @@ public class TuteController {
     }
 
     @RequestMapping(value = "/login", method = RequestMethod.GET)
-    public String loginCheck(@RequestParam (value = "user")String user,@RequestParam (value = "pass")String pass) {
+    public String loginCheck(Model model,@RequestParam (value = "user")String user,@RequestParam (value = "pass")String pass) {
 
-       if(user.equalsIgnoreCase("admin")&& pass.equalsIgnoreCase("1234")){
+        //System.out.println("USERNAME : "+user+ " PASSWORD : " +pass);
+       if(user.equalsIgnoreCase("admin") && pass.equalsIgnoreCase("1234")){
+           //System.out.println("Admin : "+user+ " PASSWORD : " +pass);
         return "redirect:/admin";
+
        }
         else if(user.equalsIgnoreCase("student")&&pass.equalsIgnoreCase("1234")){
-
             return "redirect:/student";
 
         }
         else {
-
-            return "redirect:/";
+           model.addAttribute("msg","Enter valid user name & password");
+           return "redirect:/";
        }
 
     }

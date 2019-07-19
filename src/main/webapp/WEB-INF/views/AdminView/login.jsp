@@ -15,6 +15,11 @@
         <%@ include file="../../css/login.css" %>
         -->
     </style>
+
+    <script type="text/javascript">
+        <%@include file="../../js/main.js"%>
+    </script>
+
 </head>
 <body>
 <div class="container">
@@ -58,28 +63,13 @@
                 <div class="d-flex justify-content-center">
                     <a href="#">Forgot your password?</a>
                 </div>
+                <div>
+                    <h4>${msg}</h4>
+                </div>
             </div>
         </div>
     </div>
 </div>
-<script type="text/javascript">
-    function login() {
-        var pass = document.forms["myForm"]["adminPass"].value;
-        var userName = document.forms["myForm"]["admin"].value;
-
-        console.log(userName,pass);
-
-       if(userName === "admin" && pass === "12345"){
-
-            window.location.assign("/admin");
-            console.log(pass,userName)
-
-        }else{
-            alert("Please Enter Valid User Name and Password")
-        }
-
-    }
-</script>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>

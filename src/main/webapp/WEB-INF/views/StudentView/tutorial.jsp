@@ -24,6 +24,11 @@
         <%@ include file="../../css/listView.css" %>
         -->
     </style>
+
+    <script type="text/javascript">
+        <%@include file="../../js/main.js"%>
+    </script>
+
 </head>
 <body class="bg-dark">
 <h1 align="center" class="bodyfont">The Online Library</h1>

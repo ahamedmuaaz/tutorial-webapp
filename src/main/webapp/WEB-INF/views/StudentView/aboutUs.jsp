@@ -16,9 +16,12 @@
     <style type="text/css">
         <!--
         <%@ include file="../../css/mainStyle.css" %>
-
         -->
     </style>
+    <script type="text/javascript">
+        <%@include file="../../js/main.js"%>
+    </script>
+
 </head>
 <body class="bg-dark ">
 
