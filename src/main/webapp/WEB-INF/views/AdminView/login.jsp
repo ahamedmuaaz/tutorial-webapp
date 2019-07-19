@@ -29,25 +29,25 @@
                 </div>
             </div>
             <div class="card-body">
-                <form name="myForm" action="/admin" method="get">
+                <form name="myForm" action="/login" method="get">
                     <div class="input-group form-group">
                         <div class="input-group-prepend">
                             <span class="input-group-text"><i class="fas fa-user"></i></span>
                         </div>
-                        <input type="text" class="form-control" name ="admin" placeholder="username" required>
+                        <input type="text" class="form-control" name ="user" placeholder="username" required>
 
                     </div>
                     <div class="input-group form-group">
                         <div class="input-group-prepend">
                             <span class="input-group-text"><i class="fas fa-key"></i></span>
                         </div>
-                        <input type="password" class="form-control" name="adminPass" placeholder="password" required>
+                        <input type="password" class="form-control" name="pass" placeholder="password" required>
                     </div>
                     <div class="row align-items-center remember">
                         <input type="checkbox">Remember Me
                     </div>
                     <div class="form-group">
-                        <input type="submit" value="Login" class="btn float-right login_btn" onclick="login()">
+                        <input type="submit" value="Login" class="btn float-right login_btn">
                     </div>
                 </form>
             </div>

@@ -88,7 +88,7 @@
     }
 
     function gotostudent() {
-        window.location.assign("/");
+        window.location.assign("/student");
 
     }
 

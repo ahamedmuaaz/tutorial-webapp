@@ -17,7 +17,7 @@ public class StudentController {
 
     private static Logger log = Logger.getLogger(TuteController.class);
 
-    @RequestMapping(value = "/", method = RequestMethod.GET)
+    @RequestMapping(value ="/student", method = RequestMethod.GET)
     public String index(Model modal) {
         List<Tutorial> listtut = API_Repository.View();
         modal.addAttribute("tutelist", listtut);
@@ -27,7 +27,7 @@ public class StudentController {
 
     }
 
-    @RequestMapping(value = "/view", method = RequestMethod.GET)
+    @RequestMapping(value = "/student/view", method = RequestMethod.GET)
     public String viewtute(@RequestParam(value = "id", required = true) int id, Model model) {
         model.addAttribute("tute", API_Repository.findOneById(id));
 
@@ -35,7 +35,7 @@ public class StudentController {
         return "StudentView/tutorial";
     }
 
-    @RequestMapping(value = "/about-us", method = RequestMethod.GET)
+    @RequestMapping(value = "/student/about-us", method = RequestMethod.GET)
     public String viewtute(Model model) {
         model.addAttribute("today", new Date());
         return "StudentView/aboutUs";

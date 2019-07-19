@@ -94,4 +94,30 @@ public class TuteController {
         return "redirect:/admin/list";
     }
 
+    @RequestMapping(value = "/", method = RequestMethod.GET)
+    public String login(Model modal) {
+
+        modal.addAttribute("today", new Date());
+        return "AdminView/login";
+
+    }
+
+    @RequestMapping(value = "/login", method = RequestMethod.GET)
+    public String loginCheck(@RequestParam (value = "user")String user,@RequestParam (value = "pass")String pass) {
+
+       if(user.equalsIgnoreCase("admin")&& pass.equalsIgnoreCase("1234")){
+        return "redirect:/admin";
+       }
+        else if(user.equalsIgnoreCase("student")&&pass.equalsIgnoreCase("1234")){
+
+            return "redirect:/student";
+
+        }
+        else {
+
+            return "redirect:/";
+       }
+
+    }
+
 }
