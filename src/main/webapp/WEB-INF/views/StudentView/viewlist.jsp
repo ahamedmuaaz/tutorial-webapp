@@ -49,6 +49,7 @@
     </div>
 </nav>
 <div class="bodybackground">
+    <div class="myoverlay">
     <h1 align="center" class="bodyfont">The Online Library</h1>
     <h5 align="center" class="datefont"><fmt:formatDate value="${today}" pattern="yyy-MM-dd"/></h5>
 
@@ -56,7 +57,7 @@
         <div class="row">
             <c:forEach var="tut" items="${tutelist}" varStatus="loop">
 
-                <div class="col-md-3 text-center">
+                <div class="col-sm text-center">
                     <div class="card1">
                         <img class="card-img-top" src="${tut.getImageUrl()}" alt=""
                              style=" width: 249px;height:250px">
@@ -76,6 +77,7 @@
                 </div>
             </c:forEach>
         </div>
+    </div>
     </div>
 </div>
 <footer class="page-footer">

@@ -84,7 +84,7 @@ body {
     flex-direction: column;
     min-width: 0;
     word-wrap: break-word;
-    background-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/disp/15549a14589707.5628669c64769.png");
+    background-image: url("http://www.toca-ch.com/data/walls/123/25665498.jpg");
     background-color: #39426294;
     color: #dddddd;
     background-clip: border-box;
@@ -139,8 +139,18 @@ hr {
 
 .bodybackground{
     background-image: url('../../resources/background.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-size:cover;
+    background-position: center;
+    position: relative;
+}
+.myoverlay{
+    position:relative;
+    min-height: 100%;
+    min-width: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.6);
+
 }
 @media (max-width: 575.98px) {
     .description {

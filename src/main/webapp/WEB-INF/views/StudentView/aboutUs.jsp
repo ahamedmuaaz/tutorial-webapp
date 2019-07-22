@@ -47,7 +47,7 @@
         </ul>
     </div>
 </nav>
-<div class="container-fluid">
+ <div class="container-fluid">
     <h1 align="center" class="bodyfont">The Online Library</h1>
     <h5 align="center" class="datefont"><fmt:formatDate value="${today}" pattern="yyy-MM-dd"/></h5>
 
@@ -93,33 +93,33 @@
             </div>
         </div>
     </div>
-
-    <footer class="page-footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-md-8 col-sm-12">
-                    <h6 class="text-uppercase font-weight-bold">Additional Information</h6>
-                    <p>hSenid Mobile Solutions is a company with a proud history of 20 years of innovations, proven
-                        expertise while still having a heart of a startup. We design and build innovative
-                        cutting-edge technology platforms which enables the digital transformation of the businesses..</p>
-                    <p>Our advanced solutions and guaranteed service qualities has enabled us to gain healthy base of loyal customers.
-                        We strive to help our customers by opening up uncontested market spaces and thereby achieve rapid growth.</p>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-12">
-                    <h6 class="text-uppercase font-weight-bold">Contact</h6>
-                    <p>hSenid Mobile Solutions
-                        No 320, 3rd Floor,
-                        T.B.Jayah Mawatha,
-                        Colombo 10.
-                        <br/>info@mywebsite.com
-                        <br/>+ 94 712959395
-                        <br/>+ 01 234 567 89</p>
-                </div>
+ </div>
+<footer class="page-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-8 col-sm-12">
+                <h6 class="text-uppercase font-weight-bold">Additional Information</h6>
+                <p>hSenid Mobile Solutions is a company with a proud history of 20 years of innovations, proven
+                    expertise while still having a heart of a startup. We design and build innovative
+                    cutting-edge technology platforms which enables the digital transformation of the businesses..</p>
+                <p>Our advanced solutions and guaranteed service qualities has enabled us to gain healthy base of loyal customers.
+                    We strive to help our customers by opening up uncontested market spaces and thereby achieve rapid growth.</p>
             </div>
-            <div class="footer-copyright text-center">© 2019 Copyright: tutoriallibrary.com</div>
+            <div class="col-lg-4 col-md-4 col-sm-12">
+                <h6 class="text-uppercase font-weight-bold">Contact</h6>
+                <p>hSenid Mobile Solutions
+                    No 320, 3rd Floor,
+                    T.B.Jayah Mawatha,
+                    Colombo 10.
+                    <br/>info@mywebsite.com
+                    <br/>+ 94 712959395
+                    <br/>+ 01 234 567 89</p>
+            </div>
         </div>
-    </footer>
-</div>
+        <div class="footer-copyright text-center">© 2019 Copyright: tutoriallibrary.com</div>
+    </div>
+</footer>
+
 <script type="text/javascript">
     function gotoadmin() {
         window.location.assign("/admin");

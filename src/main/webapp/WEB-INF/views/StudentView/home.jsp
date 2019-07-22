@@ -47,14 +47,12 @@
     <div class="overlay"></div>
     <div class="description">
         <h1>Welcome to the Tutorial Library!</h1>
-        <p>"Every act of conscious learning requires the willingness to suffer an injury
-            to one's self-esteem. That is why young children, before they are aware of
-            their own self-importance,learn so easily." </p><br><p>-Thomas Szasz-
+        <p><b>"Education is the most powerful weapon which you can use to change the world" </b></p><p>-Nelson Mandela-
         </p>
-        <button class="btn btn-outline-secondary btn-lg">Tell Me More!</button>
+        <button class="btn btn-outline-secondary btn-lg" onclick="godown()">Contact Us</button>
     </div>
 </header>
-<footer class="page-footer">
+<footer class="page-footer" id="contact">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-md-8 col-sm-12">
@@ -90,6 +88,11 @@
         $('.header').height($(window).height());
     })
 
+
+    function godown() {
+        window.location.assign("#contact");
+
+    }
 
 </script>
 </body>
